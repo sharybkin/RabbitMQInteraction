@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
-using MQCommonObjects.Dtos;
+using System.Threading.Tasks;
+using MQCommonObjects.Contracts;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 
@@ -15,7 +16,7 @@ namespace MQSender
             _factory = connectionFactory;
         }
         
-        public void Send(Order order)
+        public Task Send(Order order)
         {
             using var connection = _factory.CreateConnection();
             using var channel = connection.CreateModel();
@@ -32,6 +33,7 @@ namespace MQSender
             Console.WriteLine("Order was sent");
             Console.WriteLine(message);
             Console.WriteLine();
+            return Task.CompletedTask;
         }
     }
 }

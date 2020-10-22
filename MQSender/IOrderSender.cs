@@ -1,9 +1,10 @@
-﻿using MQCommonObjects.Dtos;
+﻿using System.Threading.Tasks;
+using MQCommonObjects.Contracts;
 
 namespace MQSender
 {
     public interface IOrderSender
     {
-        public void Send(Order order);
+        public Task Send(Order order);
     }
 }

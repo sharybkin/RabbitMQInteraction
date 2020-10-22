@@ -1,21 +1,21 @@
 ﻿using System;
 
-namespace MQCommonObjects.Dtos
+namespace MQCommonObjects.Contracts
 {
     public class QueueMessageDetail
     {
-        public Guid MessageId { get; }
+        public Guid Id { get; }
         public DateTime CreateDate { get; }
 
         public QueueMessageDetail()
         {
-            MessageId = Guid.NewGuid();
+            Id = Guid.NewGuid();
             CreateDate = DateTime.UtcNow;
         }
 
-        public QueueMessageDetail(Guid messageId, DateTime createDate)
+        public QueueMessageDetail(Guid id, DateTime createDate)
         {
-            MessageId = messageId;
+            Id = id;
             CreateDate = createDate;
         }
     }

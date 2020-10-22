@@ -1,15 +1,12 @@
-﻿using System;
-using System.Drawing;
-using System.Text;
-using System.Text.Json;
+﻿using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using MQCommonObjects.Dtos;
+using MQCommonObjects.Contracts;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace MQReceiver
+namespace MQReceiver.NativeClient
 {
     public class NativeClientOrderReceiver : IReceiver<Order>
     {

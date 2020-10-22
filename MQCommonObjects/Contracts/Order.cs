@@ -1,4 +1,5 @@
-﻿namespace MQCommonObjects.Dtos
+﻿
+namespace MQCommonObjects.Contracts
 {
     public class Order : QueueMessageDetail
     {

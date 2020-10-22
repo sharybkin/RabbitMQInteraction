@@ -1,9 +1,9 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
-using MQCommonObjects.Dtos;
+using MQCommonObjects.Contracts;
 
-namespace MQReceiver
+namespace MQReceiver.NativeClient
 {
     public class OrderReceiverWorker: BackgroundService
     {
